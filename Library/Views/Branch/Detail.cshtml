@@ -1,0 +1,66 @@
+﻿@model Library.Models.Branch.BranchDetailModel
+@{
+
+    ViewBag.Title = Model.Name + " Branch";
+}
+
+<div class="container">
+    <div class="page-header clearfix detailHeading">
+        <h2 class="text-muted">Branch Details</h2>
+    </div>
+    <div class="jumbotron">
+        <div class="row">
+            <img src="@Model.ImageUrl" />
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+
+                <h2>@Model.Name</h2>
+
+                <div class="BranchContact">
+                    <div>Address: @Model.Address</div>
+                    <div>Telephone: @Model.Telephone </div>
+                </div>
+                <div class="BranchDescription">
+                    <p class="caption">@Model.Description</p>
+                </div>
+                <div id="BranchHours">
+                    <ul>
+                        @foreach (var day in Model.HoursOpen)
+                        {
+                            <li>@day</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <table>
+
+                    <tr>
+                        <td>Date Opened</td>
+                        <td>@Model.OpenDate</td>
+                    </tr>
+
+                    <tr>
+                        <td>Number Of Patron</td>
+                        <td>@Model.NumberOfPatrons</td>
+                    </tr>
+
+                    <tr>
+                        <td>Number Of Assets</td>
+                        <td>@Model.NumberOfAssets</td>
+                    </tr>
+
+                    <tr>
+                        <td>Value Of Assets</td>
+                        <td>@Model.TotalAssetValue</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+

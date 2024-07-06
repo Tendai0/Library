@@ -1,0 +1,34 @@
+﻿@model Library.Models.Checkout.CheckoutModel
+
+
+<div class="container">
+    <div class="page-header clearfix detailHeading">
+        <h2 class="text-muted">Check Out Library Item</h2>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <p id="itemTittle">@Model.Title</p>
+                        <img class="detailImage" src="@Model.ImageUrl" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    @using (Html.BeginForm("PlaceCheckOut", "Catalog", FormMethod.Post))
+                    {
+
+                        @Html.HiddenFor(a => a.AssetId)
+                        <div>
+                            Please insert a Library Card ID.
+                            @Html.TextBoxFor(a => a.LibraryCardId)
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-success btn-lg">Check Out</button>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

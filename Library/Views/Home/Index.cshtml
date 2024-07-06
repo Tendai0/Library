@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Library Management System ";
+}
+
+
+@*<div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="/images/emma.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>*@
+
+
+
+
+
+
+@*<div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-block">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>*@
+
+
+
+
+<link href="~/css/StyleSheet.css" rel="stylesheet" />
+<body class="back">
+    <div class="home-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="home-text">
+                        <div style="padding-top:25px">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3>@ViewData["Title"]</h3>
+                                </div>
+                                <div class="panel-body" style="height:350px">
+                                    <div class="row container col-lg-12 center-block">
+                                        <div class="card col-md-3 col-md-offset-2" style="width: 18rem; border-radius:10px; border:thin solid #ddd; padding:20px ;height:250px">
+                                            <div class="card-body" style="padding-bottom:60px">
+                                                <img class="card-img-top" src="/images/emma.png">
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item"><a asp-area="" asp-controller="Catalog" asp-action="Index">Catalog</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card col-md-3 col-md-offset-1" style="width: 18rem; border-radius:10px; border:thin solid #ddd; padding:20px;height:250px">
+                                            <div class="card-body" style="padding-bottom:60px">
+                                                <img class="card-img-top" src="/images/emma.png">
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item"><a asp-area="" asp-controller="Patron" asp-action="Index">Patron</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="card col-md-3 col-md-offset-1 of" style="width: 18rem; border-radius:10px; border:thin solid #ddd; padding:20px;height:250px">
+                                            <div class="card-body" style="padding-bottom:60px">
+                                                <img class="card-img-top" src="/images/emma.png">
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item"><a asp-area="" asp-controller="Branch" asp-action="Index">Branch</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <h3>Wellcome</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
